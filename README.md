@@ -12,6 +12,7 @@ This C++ OpenCV project captures live images using the Raspberry Pi camera, allo
 - Brightness enhancement
 - Binary + edge-based lane segmentation
 - Histogram visualization of the bottom frame slice
+- Master Slave communication between Raspberry pi (which processes the image) and Arduino Uno (which controls the wheels)
 - Graceful exit with `Ctrl+C` or `q`
 
 ---
@@ -31,6 +32,8 @@ This C++ OpenCV project captures live images using the Raspberry Pi camera, allo
 3. **Transform:** Creates a bird’s eye view using `cv::getPerspectiveTransform`.
 4. **Enhance & Segment:** Increases brightness and applies threshold + edge detection.
 5. **Histogram:** Generates a histogram showing pixel activity in lower frame region.
+6. **Master Slave Communication:** According to the offset value in the histogram, the raspberry pi send signals to the Arduino Uno.
+7. **Movement:** The Arduino Uno with the help of L298 motor driver, controls the wheels
 
 ---
 
